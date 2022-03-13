@@ -1,0 +1,256 @@
+$danger: #d80000;
+$warning: #ea580c;
+$success: #16a34a;
+$primary: #1e54c9;
+$info: #4f46e5;
+$dark: #151b24;
+
+$navbar: $primary;
+$navbar-secondary: darken($navbar, 15%);
+
+$container: 1200px;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	letter-spacing: 0.2px;
+}
+
+h1,
+h2 {
+	color: white;
+}
+
+p,
+label,
+h3,
+h4,
+h5,
+h6 {
+	color: darken(white, 15%);
+	font-weight: normal;
+}
+label {
+	font-size: x-large;
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: $dark;
+	color: white;
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat";
+}
+nav {
+	margin-bottom: 15px;
+}
+.navbar {
+	font-size: x-large;
+	overflow: hidden;
+	background: $navbar;
+	a {
+		float: left;
+		text-align: center;
+		color: #f2f2f2;
+		padding: 8px;
+		margin: 8px;
+		text-decoration: none;
+		font-size: x-large;
+		transition: 200ms ease;
+		border-radius: 5px;
+		i {
+			margin-right: 2.5px;
+		}
+		&:hover {
+			background: lighten($navbar, 5%);
+		}
+		&.right {
+			float: right;
+		}
+	}
+	span {
+		padding: 8px;
+		margin: 8px;
+		color: white;
+		font-weight: bold;
+		float: left;
+	}
+}
+
+.navbar-secondary {
+	font-size: x-large;
+	overflow: hidden;
+	background: $navbar-secondary;
+	a {
+		i {
+			margin-right: 5px;
+		}
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 8px;
+		margin: 5px;
+		text-decoration: none;
+		font-size: x-large;
+		transition: 200ms ease;
+		border-radius: 5px;
+		&:hover {
+			background: lighten($navbar-secondary, 5%);
+		}
+	}
+}
+.nav-container {
+	max-width: $container + 300px;
+	margin: auto;
+}
+.container {
+	max-width: $container;
+	margin: auto;
+}
+@media only screen and (max-width: $container) {
+	.container {
+		width: 100%;
+	}
+}
+.alert {
+	padding: 16px;
+	font-size: x-large;
+	text-align: center;
+	border-radius: 5px;
+	color: white;
+	margin-bottom: 15px;
+	&.primary {
+		background: $primary;
+	}
+	&.danger {
+		background: $danger;
+	}
+	&.success {
+		background: $success;
+	}
+	&.info {
+		background: $info;
+	}
+}
+
+.bold {
+	font-weight: bold;
+}
+// row and columns boilerplate
+.row {
+	display: flex;
+	width: 100%;
+
+	.col-1 {
+		width: 8.33%;
+	}
+	.col-2 {
+		width: 16.66%;
+	}
+	.col-3 {
+		width: 25%;
+	}
+	.col-4 {
+		width: 33.33%;
+	}
+	.col-5 {
+		width: 41.66%;
+	}
+	.col-6 {
+		width: 50%;
+	}
+	.col-7 {
+		width: 58.33%;
+	}
+	.col-8 {
+		width: 66.66%;
+	}
+	.col-9 {
+		width: 75%;
+	}
+	.col-10 {
+		width: 83.33%;
+	}
+	.col-11 {
+		width: 91.66%;
+	}
+	.col-12 {
+		width: 100%;
+	}
+	&::after {
+		/* display: block;*/
+		clear: both;
+		content: "";
+	}
+}
+
+button {
+	padding: 14px 16px;
+	font-size: large;
+	border: none;
+	transition: 200ms all ease;
+	border-radius: 5px;
+	font-family: inherit;
+	font-size: x-large;
+	font-weight: 400;
+	&:hover {
+		cursor: pointer;
+	}
+	i {
+		margin-right: 5px;
+	}
+	color: white;
+	&.primary {
+		background: $primary;
+		&:hover {
+			background: darken($color: $primary, $amount: 15%);
+		}
+	}
+	&.danger {
+		background: $danger;
+		&:hover {
+			background: darken($color: $danger, $amount: 15%);
+		}
+	}
+}
+
+.form {
+	label {
+		display: block;
+	}
+	button {
+		width: 100%;
+	}
+	.input-group {
+		margin-bottom: 12px;
+	}
+}
+
+input[type="text"],
+input[type="password"] {
+	padding: 8px 12px;
+	width: 100%;
+	font-size: x-large;
+	font-family: inherit;
+	background: $dark;
+	border: 0;
+	color: white;
+}
+
+.card {
+	background: lighten($color: $dark, $amount: 5%);
+	padding: 16px;
+	border-radius: 5px;
+}
+
+.center {
+	margin: auto;
+}
